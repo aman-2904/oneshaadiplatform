@@ -4,7 +4,7 @@
 }
 
 .header {
-  background: #000;
+  background: maroon;
   color: var(--color-accent-contrast);
   padding: var(--space-8) var(--space-5);
   text-align: center;

@@ -19,10 +19,7 @@ export default function Home() {
     <div className={styles.home}>
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <h1 className={styles.title}>Event Tools Hub</h1>
-          <p className={styles.subtitle}>
-            Your centralized dashboard for accessing professional event management tools
-          </p>
+          <h1 className={styles.title}>Shaadi Platform</h1>
         </div>
       </header>
 

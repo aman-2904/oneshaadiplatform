@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import styles from './electric-border.module.css';
 
@@ -13,7 +13,7 @@ interface ElectricBorderProps {
   style?: CSSProperties;
 }
 
-const ElectricBorder: React.FC<ElectricBorderProps> = ({
+export default function ElectricBorder({
   children,
   color = '#5227FF',
   speed = 1,
@@ -22,7 +22,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
   thickness = 2,
   className,
   style
-}) => {
+}: ElectricBorderProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -303,6 +303,4 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
       <div className={styles.content}>{children}</div>
     </div>
   );
-};
-
-export default ElectricBorder;
+}

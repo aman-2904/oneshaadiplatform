@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';
 import styles from './target-cursor.module.css';
 
@@ -10,13 +10,13 @@ export interface TargetCursorProps {
   parallaxOn?: boolean;
 }
 
-const TargetCursor: React.FC<TargetCursorProps> = ({
+const TargetCursor = ({
   targetSelector = '.cursor-target',
   spinDuration = 2,
   hideDefaultCursor = true,
   hoverDuration = 0.2,
   parallaxOn = true
-}) => {
+}: TargetCursorProps) => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const cornersRef = useRef<NodeListOf<HTMLDivElement> | null>(null);
   const spinTl = useRef<gsap.core.Timeline | null>(null);
@@ -28,6 +28,9 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   const activeStrengthRef = useRef({ current: 0 });
 
   const isMobile = useMemo(() => {
+    // SSR check - return true on server to avoid rendering
+    if (typeof window === 'undefined') return true;
+    
     const hasTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const isSmallScreen = window.innerWidth <= 768;
     const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;

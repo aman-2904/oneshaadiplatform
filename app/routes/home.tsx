@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import styles from "./home.module.css";
 import { ToolCard } from "~/components/tool-card/tool-card";
 import { eventTools } from "~/data/event-tools";
+import TargetCursor from "~/components/ui/target-cursor/target-cursor";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,7 +17,9 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className={styles.home}>
+    <>
+      <TargetCursor targetSelector=".cursor-target" spinDuration={2} hideDefaultCursor={true} hoverDuration={0.2} parallaxOn={true} />
+      <div className={styles.home}>
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <h1 className={styles.title}>Shaadi Platform</h1>
@@ -33,6 +36,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </div>
+      </div>
+    </>
   );
 }

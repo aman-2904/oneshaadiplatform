@@ -42,7 +42,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ name, description, url, icon
 
   return (
     <ElectricBorder color="#14b8a6" speed={1.2} chaos={0.15} borderRadius={16} thickness={2}>
-      <a href={url} target="_blank" rel="noopener noreferrer" className={classNames(styles.toolCard, className)}>
+      <a href={url} target="_blank" rel="noopener noreferrer" className={classNames(styles.toolCard, 'cursor-target', className)}>
         <div className={styles.iconWrapper}>
           <IconComponent size={28} strokeWidth={2} />
         </div>

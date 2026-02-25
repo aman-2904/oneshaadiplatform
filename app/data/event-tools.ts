@@ -39,7 +39,7 @@ export const eventTools: EventTool[] = [
     id: "invoice-maker",
     name: "Invoice Maker",
     description: "Create and send professional invoices for your event management services",
-    url: "https://invoice-maker.example.com",
+    url: "https://billmaker2.vercel.app/",
     icon: "Receipt",
   },
 ];

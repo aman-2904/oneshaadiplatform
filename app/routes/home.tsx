@@ -3,6 +3,7 @@ import styles from "./home.module.css";
 import { ToolCard } from "~/components/tool-card/tool-card";
 import { eventTools } from "~/data/event-tools";
 import TargetCursor from "~/components/ui/target-cursor/target-cursor";
+import LightRays from "~/components/ui/light-rays/light-rays";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -20,6 +21,20 @@ export default function Home() {
     <>
       <TargetCursor targetSelector=".cursor-target" spinDuration={2} hideDefaultCursor={true} hoverDuration={0.2} parallaxOn={true} />
       <div className={styles.home}>
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={1}
+          lightSpread={0.5}
+          rayLength={3}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0}
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        />
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <h1 className={styles.title}>Shaadi Platform</h1>

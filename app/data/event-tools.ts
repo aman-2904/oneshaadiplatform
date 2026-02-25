@@ -32,7 +32,7 @@ export const eventTools: EventTool[] = [
     id: "rsvp",
     name: "RSVP",
     description: "Manage guest responses and track attendance for your events seamlessly",
-    url: "https://rsvp.example.com",
+    url: "https://rsvp-eight-psi.vercel.app/admin/login",
     icon: "Users",
   },
   {

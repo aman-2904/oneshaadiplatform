@@ -4,6 +4,7 @@ import { ToolCard } from "~/components/tool-card/tool-card";
 import { eventTools } from "~/data/event-tools";
 import TargetCursor from "~/components/ui/target-cursor/target-cursor";
 import LightRays from "~/components/ui/light-rays/light-rays";
+import CircularText from "~/components/circular-text/circular-text";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -37,6 +38,13 @@ export default function Home() {
         />
       <header className={styles.header}>
         <div className={styles.headerContent}>
+          <div className={styles.headerLeft}>
+            <CircularText
+              text="SHAADI*PLATFORM*"
+              onHover="speedUp"
+              spinDuration={20}
+            />
+          </div>
           <h1 className={styles.title}>Shaadi Platform</h1>
         </div>
       </header>

@@ -18,7 +18,7 @@ export const eventTools: EventTool[] = [
     id: "agreement-maker",
     name: "Agreement Maker",
     description: "Create professional event agreements and contracts with customizable templates",
-    url: "https://agreement-maker.example.com",
+    url: "https://agreement-maker2.vercel.app/",
     icon: "FileText",
   },
   {

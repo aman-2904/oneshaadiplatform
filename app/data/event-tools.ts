@@ -25,7 +25,7 @@ export const eventTools: EventTool[] = [
     id: "quotation-maker",
     name: "Quotation Maker",
     description: "Generate detailed quotations and pricing proposals for your event services",
-    url: "https://quotation-maker.example.com",
+    url: "https://banquet-quote-wiz.vercel.app/",
     icon: "Calculator",
   },
   {

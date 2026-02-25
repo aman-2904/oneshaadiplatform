@@ -46,7 +46,7 @@
 
 .sectionTitle {
   font: var(--font-heading);
-  color: var(--color-neutral-12);
+  color: white;
   margin: 0 0 var(--space-6) 0;
   text-align: center;
 }

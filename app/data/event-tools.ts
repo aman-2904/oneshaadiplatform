@@ -11,7 +11,7 @@ export const eventTools: EventTool[] = [
     id: "venue-filter",
     name: "Venue Filter",
     description: "Find and filter the perfect venue for your event with advanced search capabilities",
-    url: "https://venue-filter.example.com",
+    url: "https://venue-ecru.vercel.app/admin-login",
     icon: "MapPin",
   },
   {
